@@ -1,0 +1,411 @@
+
+@font-face {
+    font-family: "Anthony";
+    src: url(Anthony.woff2);
+}
+
+html {
+    font-size: 15;
+}
+
+body {
+    z-index: -1;
+    text-align: left;
+    color: #111;
+    counter-reset: sidenote-counter;
+    background: linear-gradient(to top, white, 99%, #b4d5fe);
+   
+}
+
+
+h1 {
+    text-align: center;
+    font-family: "Anthony";
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+h3 {
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline;
+    text-align: center;
+    color: #00c16a;
+}
+
+
+
+
+p,
+dl,
+ol,
+ul {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+p {
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+
+
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0 0 3em 0;
+}
+
+figcaption {
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-size: small;
+    font-style: normal;
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%;
+}
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+      color: #ff99ff;
+      text-decoration: none;
+}
+
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
+
+}
+
+
+/* MY STYLING */
+
+#text-wrapper {
+    margin-left: 63.5vh;
+    margin-right: 63.5vh;
+}
+
+.images {
+    margin: 0 auto;
+}
+
+/* bibliography */
+
+sup{
+    vertical-align: super;
+    font-size: 0.8rem;
+    line-height: normal;
+    text-decoration: none;
+}
+#bibliography{
+    display: flex;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+ol {
+
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: normal;
+}
+
+/* title header */
+#title {
+    margin-left: 62vh;
+    margin-right: 40vh;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    color: black;
+    
+}
+
+#name {
+    font-family: "Anthony";
+    /* font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    font-size: 1.6rem;
+    line-height: normal;
+    color: white;
+    border-width: thin;
+    border-radius: 3vh;
+    border-style: solid;
+    border-color: black;
+    background-color: black;
+    padding: 1.4vh 1.6vh;
+
+}
+
+/* Fig. side by side */
+
+
+.column {
+    flex: 33.33%;
+  }
+  
+  .row {
+    display: flex;
+  }
+
+
+footer {
+    font-size: "tablet-gothic", sans-serif;
+    text-align: center;
+    color: #00c16a;
+    padding: auto;
+    background-color: black;
+    border-radius: 3vh;
+    font-size: 0.1rem !important;
+
+}
+
+#arrow-symbol {
+    color: white;
+}
+
+#footnote-symbol {
+    color: #00c16a;
+
+}
+
+/* Nav bar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  li {
+    float: left;
+    padding: 1vh;
+  }
+  
+  li a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+
+  #navbar {
+    z-index: 1;
+    font-family: "Anthony";
+    overflow: hidden;
+    margin-left: 62vh;
+    border-width: thin;
+    border-radius: 3vh;
+    border-style: solid;
+    border-color: black;
+
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 1.4vh 1.6vh;
+    text-decoration: none;
+    font-size: 2rem;
+    float: left;
+    display: block;
+    color: #00c16a;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: black;
+    border-radius: 2.0vh;
+    text-decoration: none;
+  }
+  
+  #navbar a.active {
+    color: white;
+  }
+  
+  .content {
+    padding: 1.6vh;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 6.0vh;
+  }
+
+
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 1.6vh;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 6.0vh;
+  }
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    h2, h3 {
+        /* margin-top: 1.5rem; */
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    p, dl, ol, ul {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    figure {
+        max-width: 100%;
+    }
+
+    #text-wrapper {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    #title {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 3.6rem;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: calc(100% - 2rem);
+        z-index: 1000;
+        background-color: white;
+        border-bottom: 1px solid black;
+    }
+
+    #navbar a {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 0.1rem;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #00c16a;
+    }
+
+    footer {
+        font-size: 0.1rem !important;
+        text-align: center;
+        color: #00c16a;
+        padding: auto;
+        background-color: black;
+        border-radius: 3vh;
+    }
+
+    .column {
+        flex: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .images {
+        width: 100%;
+    }
+
+    #name {
+        /* position: fixed;
+        bottom: 10vh;
+        left: 50%;
+        transform: translateX(-50%); */
+        font-size: 1.6rem;
+        padding: 1.4vh 1.6vh;
+        color: white;
+        border: thin solid black;
+        background-color: black;
+    }
+
+    body {
+        margin-top: 6.4rem; /* Height of the navbar */
+    }
+}
