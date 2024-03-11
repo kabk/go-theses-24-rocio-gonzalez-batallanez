@@ -11,11 +11,11 @@
 
 /* Tufte CSS styles */
 html {
-    font-size: 15px;
+    font-size: 15;
 }
 
 body {
-   
+    z-index: -1;
     text-align: left;
     color: #111;
     counter-reset: sidenote-counter;
@@ -24,12 +24,12 @@ body {
 }
 
 /* Adds dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
         background-color: #151515;
         color: #ddd;
     }
-}
+} */
 
 h1 {
     text-align: center;
@@ -59,15 +59,16 @@ h3 {
     padding-right: 0;
     vertical-align: baseline;
     text-align: center;
+    color: #00c16a;
 }
 
 
 hr {
     display: block;
-    height: 1px;
+    height: 0.1vh;
     width: 55%;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 0.1vh solid #ccc;
     margin: 1em 0;
     padding: 0;
 }
@@ -146,7 +147,7 @@ blockquote {
 
 blockquote p {
     width: 90%;
-    margin-right: 40px;
+    margin-right: 4vh;
 }
 
 blockquote footer {
@@ -207,6 +208,7 @@ figure.fullwidth figcaption {
 a:link,
 a:visited {
       color: #ff99ff;
+      text-decoration: none;
 }
 
 .no-tufte-underline:link {
@@ -215,20 +217,11 @@ a:visited {
 
 }
 
-a:link, .tufte-underline, .hover-tufte-underline:hover {
-    /* background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
-    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor); */
-    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-    background-repeat: no-repeat, no-repeat, repeat-x;
-    /* text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8; */
-    background-position: 0% 93%, 100% 93%, 0% 93%;
-}
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     a:link, .tufte-underline, .hover-tufte-underline:hover {
         background-position-y: 87%, 87%, 87%;
+        text-decoration: none;
     }
 }
 
@@ -236,6 +229,7 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
 @media (prefers-color-scheme: dark) {
     a:link, .tufte-underline, .hover-tufte-underline:hover {
         text-shadow: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515, 0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515, -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515, -0.15em 0 #151515;
+        text-decoration: none;
     }
 }
 
@@ -243,6 +237,7 @@ a:link::selection,
 a:link::-moz-selection {
     text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
     background: #b4d5fe;
+    text-decoration: none;
 }
 
 /* Sidenotes, margin notes, figures, captions */
@@ -371,7 +366,7 @@ label.margin-toggle:not(.sidenote-number) {
 .iframe-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
+    padding-top: 2.5vh;
     height: 0;
 }
 
@@ -383,7 +378,7 @@ label.margin-toggle:not(.sidenote-number) {
     height: 100%;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 76vh) {
     body {
         width: 84%;
         padding-left: 8%;
@@ -466,8 +461,8 @@ label.margin-toggle:not(.sidenote-number) {
 /* MY STYLING */
 
 #text-wrapper {
-    margin-left: 635px;
-    margin-right: 635px;
+    margin-left: 63.5vh;
+    margin-right: 63.5vh;
 }
 
 .images {
@@ -476,9 +471,16 @@ label.margin-toggle:not(.sidenote-number) {
 
 /* bibliography */
 
+sup{
+    vertical-align: super;
+    font-size: 0.8rem;
+    line-height: normal;
+    text-decoration: none;
+}
 #bibliography{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    display: flex;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 ol {
@@ -486,76 +488,119 @@ ol {
     font-family: "tablet-gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: normal;
 }
 
 /* title header */
 #title {
-    margin-left: 620px;
-    margin-right: 470px;
-    margin-top: 100px;
-    margin-bottom: 150px;
+    margin-left: 62vh;
+    margin-right: 40vh;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    color: black;
     
 }
 
+#name {
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: normal;
+    color: white;
+    border-width: thin;
+    border-radius: 3vh;
+    border-style: solid;
+    border-color: black;
+    background-color: black;
+
+}
 
 /* Fig. side by side */
+
+
 .column {
-  float: left !important;
-  width: 33.33% !important;
-  padding: 5px !important;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "" !important;
-  clear: both !important;
-  display: table !important;
-}
-
-footer {
-    text-align: center;
-    color: white;
-    padding: 5px;
-    background-color: black;
-    border-radius: 20px;
-    font-size: 2rem !important;
-
-}
-
-
-.header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
+    flex: 33.33%;
   }
   
-  #navbar {
-    font-family: "Anthony";
+  .row {
+    display: flex;
+  }
+
+
+footer {
+    font-size: "tablet-gothic", sans-serif;
+    text-align: center;
+    color: #00c16a;
+    padding: auto;
+    background-color: black;
+    border-radius: 3vh;
+    font-size: 0.1rem !important;
+
+}
+
+#arrow-symbol {
+    color: white;
+}
+
+#footnote-symbol {
+    color: #00c16a;
+
+}
+
+/* Nav bar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     background-color: black;
-    margin-left: 635px;
+  }
+  
+  li {
+    float: left;
+    padding: 1vh;
+  }
+  
+  li a {
+    display: inline-block;
+    text-decoration: none;
+  }
 
-    border-radius: 20px;
+
+  #navbar {
+    z-index: 1;
+    font-family: "Anthony";
+    overflow: hidden;
+    margin-left: 62vh;
+    border-width: thin;
+    border-radius: 3vh;
+    border-style: solid;
+    border-color: black;
 
   }
   
   #navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.4vh 1.6vh;
     text-decoration: none;
-    font-size: 17px;
-    
+    font-size: 2rem;
+    float: left;
+    display: block;
+    color: #b4d5fe;
+    text-align: center;
+    padding: 1vh;
+    text-decoration: none;
   }
   
   #navbar a:hover {
-    background-color: pink;
-    border-radius: 20px;
-    
+    background-color: black;
+    border-radius: 2.0vh;
+    text-decoration: none;
   }
   
   #navbar a.active {
@@ -563,7 +608,7 @@ footer {
   }
   
   .content {
-    padding: 16px;
+    padding: 1.6vh;
   }
   
   .sticky {
@@ -573,27 +618,20 @@ footer {
   }
   
   .sticky + .content {
-    padding-top: 60px;
+    padding-top: 6.0vh;
   }
+
+
+
 /* Style the navbar */
 #navbar {
     overflow: hidden;
-    background-color: #333;
-  }
-  
-  /* Navbar links */
-  #navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
+    background-color: white;
   }
   
   /* Page content */
   .content {
-    padding: 16px;
+    padding: 1.6vh;
   }
   
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -605,7 +643,7 @@ footer {
   
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
   .sticky + .content {
-    padding-top: 60px;
+    padding-top: 6.0vh;
   }
 
 html {
