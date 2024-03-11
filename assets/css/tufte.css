@@ -503,10 +503,11 @@ ol {
 }
 
 #name {
-    font-family: "tablet-gothic", sans-serif;
+    font-family: "Anthony";
+    /* font-family: "tablet-gothic", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
+    font-style: normal; */
+    font-size: 1.6rem;
     line-height: normal;
     color: white;
     border-width: thin;
@@ -514,6 +515,7 @@ ol {
     border-style: solid;
     border-color: black;
     background-color: black;
+    padding: 1.4vh 1.6vh;
 
 }
 
@@ -593,7 +595,6 @@ ul {
     display: block;
     color: #b4d5fe;
     text-align: center;
-    padding: 1vh;
     text-decoration: none;
   }
   
