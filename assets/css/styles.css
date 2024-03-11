@@ -161,9 +161,6 @@ ol {
 
 #name {
     font-family: "Anthony";
-    /* font-family: "tablet-gothic", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
     font-size: 1.6rem;
     line-height: normal;
     color: white;
@@ -394,10 +391,6 @@ html {
     }
 
     #name {
-        /* position: fixed;
-        bottom: 10vh;
-        left: 50%;
-        transform: translateX(-50%); */
         font-size: 1.6rem;
         padding: 1.4vh 1.6vh;
         color: white;
