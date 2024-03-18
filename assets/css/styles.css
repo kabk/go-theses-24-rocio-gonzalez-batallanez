@@ -330,6 +330,16 @@ html {
         margin-bottom: 1rem;
     }
 
+    ul {
+        text-align: center;    
+    }
+
+    
+    figcaption {
+        font-size: smaller;
+        text-align: center;
+    }
+
     figure {
         max-width: 100%;
     }
@@ -363,9 +373,9 @@ html {
         float: left;
         display: block;
         text-align: center;
-        padding: 0.1rem;
+        padding: 0.2rem;
         text-decoration: none;
-        font-size: 1.6rem;
+        font-size: 0.8rem;
         color: #00c16a;
     }
 
@@ -384,6 +394,7 @@ html {
 
     .row {
         flex-direction: column;
+        align-items: center;
     }
 
     .images {
