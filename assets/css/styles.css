@@ -309,6 +309,7 @@ html {
 @media only screen and (max-width: 768px) {
     html {
         font-size: 12px;
+        margin-left: 3%;
     }
 
     h1 {
@@ -323,7 +324,11 @@ html {
         font-size: 1.8rem;
     }
 
-    p, dl, ol, ul {
+    p {
+        font-size: 16px;
+        }
+    
+    dl, ol, ul {
         font-size: 1rem;
         line-height: 1.6rem;
         margin-top: 1rem;
